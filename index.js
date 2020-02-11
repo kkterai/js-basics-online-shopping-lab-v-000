@@ -18,9 +18,9 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  var arr = [];
+  // var arr = [];
   for( var i = 0; i< cart.length; i++){
-     arr.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
+    //  arr.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
 
      if(cart.length === 0){
        return "Your shopping cart is empty.";
