@@ -37,7 +37,6 @@ function viewCart() {
   }
 }
 
-
 function total() {
   var ar = [];
   for(var i = 0; cart.length > i; i++){
