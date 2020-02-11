@@ -23,21 +23,21 @@ function viewCart() {
 
   for( var i = 0; i< cart.length; i++){
 
-     arr.push(&#96;${cart[i].itemName} at $${cart[i].itemPrice}&#96;);}
+     arr.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);}
 
    if(cart.length === 0){
      return "Your shopping cart is empty.";}
 
     else if(cart.length === 1){
-    return &#96;In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.&#96;;
+    return `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}.`;
 
   }
   else if(cart.length === 2){
-    return  &#96;In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.&#96;;
+    return  `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`;
 
   }else{
    var last = arr.pop();
-   return &#96;In your cart, you have ${arr.join(', ')}, and ${last}.&#96;;
+   return `In your cart, you have ${arr.join(', ')}, and ${last}.`;
   }
   }
 
@@ -58,7 +58,7 @@ function removeFromCart(item) {
     cart.splice(i, 1);
     return cart;
   }else{
-    return &#96;That item is not in your cart.&#96;;
+    return `That item is not in your cart.`;
   }
   }
 }
