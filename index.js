@@ -18,9 +18,9 @@ function addToCart(item) {
 }
 
 function viewCart() {
-  // var arr = [];
+  var arr = [];
   for( var i = 0; i< cart.length; i++){
-    //  arr.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
+    arr.push(`${cart[i].itemName} at $${cart[i].itemPrice}`);
 
      if(cart.length === 0){
        console.log("Your shopping cart is empty.");
@@ -30,7 +30,7 @@ function viewCart() {
        return  `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}, and ${cart[1].itemName} at $${cart[1].itemPrice}.`;
      }else{
        var last = cart.pop();
-       return `In your cart, you have ${cart.join(', ')}, and ${last}.`;
+       return `In your cart, you have ${arr.join(', ')}, and ${last}.`;
      }
   }
 }
