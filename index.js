@@ -37,20 +37,20 @@ function viewCart() {
 function total() {
   var ar = [];
   for(var i = 0; cart.length > i; i++){
-    ar.push(cart[i].itemPrice);}
+    ar.push(cart[i].itemPrice);
+  }
   return ar.reduce((acc, val) => acc + val, 0);
-   }
+}
+
 
 function removeFromCart(item) {
-  for(var i = 0; cart.length > i; i++){
-    console.log(item);
-    console.log(cart[i].itemName);
-  if(item === cart[i].itemName){
-    cart.splice(i, 1);
-    return cart;
-  }else{
-    return `That item is not in your cart.`;
-  }
+  for(var i = 0; cart.length > i; i++) {
+    if(item === cart[i].itemName){
+      cart.splice(i, 1);
+      return cart;
+    } else {
+      return `That item is not in your cart.`;
+    }
   }
 }
 
